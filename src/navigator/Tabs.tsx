@@ -57,7 +57,7 @@ const TabsAndroid = () => {
     >
       <BottomTabAndroid.Screen name='Tab1Screen' options={{ title: "Tab1" }} component={Tab1Screen} />
       <BottomTabAndroid.Screen name='Tab2Screen' options={{ title: "Tab2" }} component={TopTabNavigator} />
-      <BottomTabAndroid.Screen name='StackNavigator' options={{ title: "Stack" }} component={StackNavigator} />
+      <BottomTabAndroid.Screen name='StackNavigator' options={{ title: "Stack"}} component={StackNavigator} />
     </BottomTabAndroid.Navigator>
   );
 }
