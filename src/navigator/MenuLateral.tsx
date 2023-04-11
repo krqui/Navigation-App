@@ -31,7 +31,7 @@ const MenuLateral = () => {
       drawerType: width >= 768 ? 'permanent' : 'front', //menu horizontal mode
       headerShown: false
     }} drawerContent={(props) => <MenuInterno {...props} />}>
-      {/*Remember that within the drawer navigation there can only be screens. Not text.s */}
+      {/*Remember that within the drawer navigation there can only be screens. Not texts. */}
       <Drawer.Screen name="Tabs" component={Tabs} />
       <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
     </Drawer.Navigator>
@@ -40,7 +40,7 @@ const MenuLateral = () => {
 
 const MenuInterno = ({ navigation }: DrawerContentComponentProps) => {
   return (
-    <DrawerContentScrollView>
+    <DrawerContentScrollView style={{backgroundColor:"#5856D6"}}>
       {/* Avatar section*/}
       <View style={styles.avatarContainer}>
         <Image
@@ -55,7 +55,9 @@ const MenuInterno = ({ navigation }: DrawerContentComponentProps) => {
         <TouchableOpacity
           style={{
             ...styles.menuBoton,
-            flexDirection: 'row'
+            flexDirection: 'row',
+            backgroundColor:"#ff3333",
+            borderRadius:10
           }}
           onPress={() => navigation.navigate('Tabs')}
         >
@@ -67,7 +69,9 @@ const MenuInterno = ({ navigation }: DrawerContentComponentProps) => {
         <TouchableOpacity
           style={{
             ...styles.menuBoton,
-            flexDirection: 'row'
+            flexDirection: 'row',
+            backgroundColor:"#ff3333",
+            borderRadius:10
           }}
           onPress={() => navigation.navigate('SettingsScreen')}
         >

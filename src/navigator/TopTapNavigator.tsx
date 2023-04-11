@@ -7,6 +7,7 @@ import AlbumsScreen from '../screens/AlbumsScreen';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../theme/colorsTheme';
+import styles from '../theme/appTheme';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -16,8 +17,9 @@ const TopTabNavigator = () => {
     <Tab.Navigator
       style={{ paddingTop }}//PaddingTop: The change is noticeable in IOS.
       sceneContainerStyle={{
-        backgroundColor: 'white'
+        backgroundColor: "white"
       }}
+
       screenOptions={({ route }) => ({
         tabBarActiveTintColor: colors.primary,
         tabBarPressColor: colors.primary,// when you press the titles above.
@@ -27,7 +29,8 @@ const TopTabNavigator = () => {
         },
         tabBarStyle: {// with this you style the strip below the titles
           shadowColor: 'transparent',
-          elevation: 0
+          elevation: 0,
+          backgroundColor: "#ff3333",
         },
         tabBarIcon: ({ color, focused }) => {
           let iconName: string = '';
@@ -42,13 +45,13 @@ const TopTabNavigator = () => {
               iconName = 'albums-outline'
               break
           }
-          return <Icon name={iconName} size={20} color={color} />
+          return <Icon name={iconName} size={26} color={color} />
         }
       })}
     >
-      <Tab.Screen name="Chat" component={ChatScreen} />
-      <Tab.Screen name="Contacts" component={ContactsScreen} />
-      <Tab.Screen name="Albums" component={AlbumsScreen} />
+      <Tab.Screen name="Chat" component={ChatScreen} options={{ tabBarLabelStyle: styles.TopTabNavigator }} />
+      <Tab.Screen name="Contacts" component={ContactsScreen} options={{ tabBarLabelStyle: styles.TopTabNavigator }} />
+      <Tab.Screen name="Albums" component={AlbumsScreen} options={{ tabBarLabelStyle: styles.TopTabNavigator }} />
     </Tab.Navigator>
   );
 }

@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import TopTabNavigator from '../navigator/TopTapNavigator';
 
 const styles = StyleSheet.create({
     globalMargin: {
@@ -41,7 +42,12 @@ const styles = StyleSheet.create({
         marginVertical: 10
     },
     menuText: {
-        fontSize: 20
+        fontSize: 20,
+        fontWeight:"500"
+    },
+    TopTabNavigator:{
+        fontWeight: "800",
+        fontSize: 16
     }
 });
 

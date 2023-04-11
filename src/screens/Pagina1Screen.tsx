@@ -31,8 +31,8 @@ export const Pagina1Screen = ({ navigation }: Props) => {
   })
   return (
     <View style={styles.globalMargin}>
-      <Text style={styles.title}>Pagina1Screen</Text>
-      <Button title='Ir pagina 2' onPress={() => navigation.navigate('Pagina2Screen')} />
+      <Text style={styles.title}>Screen of page 1</Text>
+      <Button title='Go to page 2' onPress={() => navigation.navigate('Pagina2Screen')} />
 
       <Text style={{
         marginVertical: 20,
@@ -45,7 +45,7 @@ export const Pagina1Screen = ({ navigation }: Props) => {
           style={{ ...styles.botonGrande, backgroundColor: '#5856D6' }}
           onPress={() => navigation.navigate('PersonaScreen', {
             id: 1,
-            nombre: 'Pedro'
+            name: 'Pedro'
           })}
         >
           <Icon name="body-outline" color="white" size={35} />
@@ -55,7 +55,7 @@ export const Pagina1Screen = ({ navigation }: Props) => {
           style={{ ...styles.botonGrande, backgroundColor: '#FF9427' }}
           onPress={() => navigation.navigate('PersonaScreen', {
             id: 2,
-            nombre: 'Maria'
+            name: 'Maria'
           })}
         >
           <Icon name="woman-outline" color="white" size={35} />

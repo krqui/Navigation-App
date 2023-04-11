@@ -8,14 +8,14 @@ const Pagina2Screen = () => {
   // A dev seniro says that is better to use the method with hooks because we are already bringing the props previously. Example: Pagina1Screen.tsx
   useEffect(() => {
     navigator.setOptions({
-      title: "Hola Mundo",
+      title: "Hello World - Page 2",
       headerBackTitle: ""// this one is for IOS
     })
   })
   return (
     <View style={styles.globalMargin}>
-      <Text style={styles.title}>Pagina2Screen</Text>
-      <Button title='Ir pagina 3' onPress={() => navigator.dispatch(CommonActions.navigate({ name: "Pagina3Screen" })
+      <Text style={styles.title}>Screen of page 2</Text>
+      <Button title='Go to page 3' onPress={() => navigator.dispatch(CommonActions.navigate({ name: "Pagina3Screen" })
       )}
       />
     </View>

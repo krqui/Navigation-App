@@ -7,11 +7,11 @@ interface Props extends StackScreenProps<any, any> { };
 const Pagina3Screen = ({ navigation }: Props) => {
   return (
     <View style={styles.globalMargin}>
-      <Text style={styles.title}>Pagina3Screen</Text>
+      <Text style={styles.title}>Screen of page 3</Text>
       {/*Pressing these buttons removes the stack. In other words, we return to page 1 and the back arrows are eliminated.*/}
-      <Button title='Regresar'
+      <Button title='Go back'
         onPress={() => navigation.pop()} />
-      <Button title='Ir a la Pagina 1'
+      <Button title='Go to page 1'
         onPress={() => navigation.popToTop()} />
     </View>
   )

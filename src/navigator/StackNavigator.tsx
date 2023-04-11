@@ -22,15 +22,16 @@ const StackNavigator = () => {
       screenOptions={{
         headerStyle: {
           elevation: 0,
-          shadowColor: 'transparent'
+          shadowColor: 'transparent',
+          backgroundColor:"#ff3333"
         },
         cardStyle: {
           backgroundColor: 'white'
         }
       }}>
-      <Stack.Screen name="Pagina1Screen" options={{ title: "Pagina 1" }} component={Pagina1Screen} />
-      <Stack.Screen name="Pagina2Screen" options={{ title: "Pagina 2" }} component={Pagina2Screen} />
-      <Stack.Screen name="Pagina3Screen" options={{ title: "Pagina 3" }} component={Pagina3Screen} />
+      <Stack.Screen name="Pagina1Screen" options={{ title: "Page 1" }} component={Pagina1Screen} />
+      <Stack.Screen name="Pagina2Screen" options={{ title: "Page 2" }} component={Pagina2Screen} />
+      <Stack.Screen name="Pagina3Screen" options={{ title: "Page 3" }} component={Pagina3Screen} />
       <Stack.Screen name="PersonaScreen" component={PersonaScreen} />
     </Stack.Navigator>
   );
